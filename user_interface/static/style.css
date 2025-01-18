@@ -1,0 +1,128 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    /*align-items: center;*/
+    background-color: rgba(0, 0, 0, 0.5);
+    background-image: url('./images/background.jpeg'); /* Adjust the path if necessary */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: Arial, sans-serif;
+    background-blend-mode: darken;
+}
+
+.container {
+    position: relative;
+
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+.container h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.row{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.players {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.player {
+    text-align: center;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.player img {
+    /*width: 150px;
+    height: 150px;*/
+   
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+}
+
+.image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    background-color: white;
+    position: relative;
+}
+
+.player p {
+    font-size: 1.2em;
+}
+.dropzone {
+    border-style: dashed;
+  }
+  
+  
+  .error {
+    font-family: MerriweatherRegular;
+    font-size: 30px;
+    
+    /*text-align: center;*/
+    width: 30%;
+    
+  }
+  
+#divClassTable{
+    text-align: right;
+    margin-left: 20px;
+}
+
+  #classTable {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  #classTable td, #classTable th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  #classTable th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #717772;
+    color: white;
+  }
+
+  .upload-zone {
+    border: 2px dashed #ccc;
+    padding: 20px;
+    text-align: center;
+    width: 300px;
+    background-color: transparent;
+    cursor: pointer;
+    margin-left: 10px;
+}
+.upload-zone:hover {
+    background-color: white;
+}
+
+.upload-zone.dragover {
+    border-color: #000;
+}
+#fileInput {
+    display: none;
+}

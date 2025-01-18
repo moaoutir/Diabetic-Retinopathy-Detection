@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diabetic Retinopathy Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='style.css') }}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Diabetic Retinopathy Detection</h1>
+        <div class="players">
+            <div class="player" id="No_DR">
+                <div class="image">
+                    <img src="../static/images/no_DR.png" alt="no_DR">
+                </div>
+                <p>no DR</p>
+            </div>
+            <div class="player" id="Mild">
+                <div class="image">
+                    <img src="../static/images/mild.png" alt="Mild">
+                </div>    
+                <p>Mild</p>
+            </div>
+            <div class="player" id="Moderate">
+                <div class="image">
+                    <img src="../static/images/moderate.png" alt="moderate">
+                </div>
+                <p>Moderate</p>
+            </div>
+            <div class="player" id="Proliferate_DR">
+                <div class="image">
+                    <img src="../static/images/proliferate_DR.png" alt="proliferate_DR">
+                </div>
+                <p>Proliferate DR</p>
+            </div>
+            <div class="player" id="Serve">
+                <div class="image">
+                    <img src="../static/images/Serve.png" alt="serve">
+                </div>
+                <p>serve</p>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="upload-zone" id="upload-zone">
+                    <p>Drag and drop a file here or click to upload</p>
+                    <input type="file" id="fileInput" multiple>
+                </div>
+                <script src="../static/scripts.js"></script>
+                
+            </div>
+            
+            <div class="col-sm-8 error" id="error" >
+                <p>Can't classify image. Classifier was not able to detect face and two eyes properly</p>    
+            </div>
+
+            <div class="col-sm-4" id="resultHolder">
+            </div>
+            <div class="col-sm-4" id="divClassTable">
+                <table id="classTable">
+                        <tr>
+                            <th>class</th>
+                            <th>Probability Score</th>
+                        </tr>
+                        <tr>
+                            <td>No DR</td>
+                            <td id="score_No_DR"></td>
+                        </tr>
+                        <tr>
+                            <td>Mild</td>
+                            <td id="score_Mild"></td>
+                        </tr>
+                        <tr>
+                            <td>Moderate</td>
+                            <td id="score_Moderate"></td>
+                        </tr>
+                        <tr>
+                            <td>Proliferate DR</td>
+                            <td id="score_Proliferate_DR"></td>
+                        </tr>
+                        <tr>
+                            <td>Severe</td>
+                            <td id="score_Severe"></td>
+                        </tr>
+                </table>
+            </div>
+            
+        </div>
+
+    </div>
+</body>
+</html>
