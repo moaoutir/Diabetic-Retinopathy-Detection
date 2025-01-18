@@ -25,28 +25,7 @@ app.mount("/static", StaticFiles(directory="user_interface/static"), name="stati
 templates = Jinja2Templates(directory="user_interface/templates")
 
 load_saved_artifacts()
-# @app.post("/upload")
-# async def upload_file(uploaded_file: UploadFile):
-#     content = await uploaded_file.read()
-#     print(content)
-#     return {"Hello": "World"}
 
-# @app.post("/upload")
-# async def upload_file(uploaded_file: bytes = File()):
-#     content = uploaded_file
-#     print(content)
-#     return {"Hello": "World"}
-
-
-# @app.post("/upload")
-# async def upload_file(request: Request):
-#     async for data in request.stream():
-#         print(data)
-
-#     return {"Hello": "World"}
-
-UPLOAD_DIR = "uploaded_images"
-os.makedirs(UPLOAD_DIR, exist_ok=True)
 
 @app.get("/", response_class=HTMLResponse)
 def read_item(request: Request):
@@ -56,9 +35,8 @@ def read_item(request: Request):
 
 @app.post("/poly")
 async def upload_base64_image(image: UploadFile = File(...)):
-    print("Base64 data received ")
+    print("image received ")
     
-    # image_bytes = base64.b64decode(image)
     image_bytes = await image.read()
     predicted_label = image_prediction(image_bytes)
 
