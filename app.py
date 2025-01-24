@@ -45,8 +45,6 @@ load_saved_artifacts()
 
 #     return {"Hello": "World"}
 
-UPLOAD_DIR = "uploaded_images"
-os.makedirs(UPLOAD_DIR, exist_ok=True)
 
 @app.get("/", response_class=HTMLResponse)
 def read_item(request: Request):

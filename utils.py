@@ -22,12 +22,13 @@ def image_prediction(image_bytes):
 
     img_array = np.expand_dims(img_array, axis=0)
     predictions = __model.predict(img_array)
+    print(predictions,"---")
     predicted_class_index = np.argmax(predictions, axis=1)
     predicted_class_index = predicted_class_index[0]
     print("Predicted class index:", predicted_class_index)
     result.append({
             'class': class_number_to_name(predicted_class_index),
-            'class_probability': np.around(predictions*100,2).tolist()[0],
+            'class_probability': np.around(predictions,2).tolist()[0],
             'class_dictionary': __class_name_to_number
         })
     print(result)
