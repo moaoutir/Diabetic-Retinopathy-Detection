@@ -9,7 +9,7 @@ import json
 
 img_height = 224
 img_width = 224
-model_persist_directory = os.path.abspath(os.path.join(os.path.dirname(__file__), "./model/model_EfficientNet.keras"))
+model_persist_directory = os.path.abspath(os.path.join(os.path.dirname(__file__), "./model/model_EfficientNet.h5"))
 
 model_classes = ['Mild', 'Moderate', 'No_DR', 'Proliferate_DR', 'Severe']
 
