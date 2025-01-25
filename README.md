@@ -25,13 +25,13 @@ This application detects diabetic retinopathy in retinal images using a FastAPI 
    ```
 2. **Create a Virtual Environment**:
 
-2.1 ***Windows***:
+- 2.1 **Windows**:
    ```bash
     python -m venv env
     source .env/bin/activate 
    ```
 
-2.2 ***Linux/MacOS***:
+- 2.2 **Linux/MacOS**:
    ```bash
     python3 -m venv .env  
     source .env/bin/activate  
