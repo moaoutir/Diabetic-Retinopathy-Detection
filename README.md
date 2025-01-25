@@ -64,6 +64,6 @@ This application detects diabetic retinopathy in retinal images using a FastAPI 
 
 
 ## Usage
-1- Navigate to the application in your browser.
-2- Upload a retinal image for analysis.
-3- View the prediction results displayed on the interface.
+- 1- Navigate to the application in your browser.
+- 2- Upload a retinal image for analysis.
+- 3- View the prediction results displayed on the interface.
