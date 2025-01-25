@@ -33,7 +33,7 @@ def read_item(request: Request):
     return templates.TemplateResponse("index.html", context)
 
 
-@app.post("/poly")
+@app.post("/classify_image")
 async def upload_base64_image(image: UploadFile = File(...)):
     print("image received ")
     

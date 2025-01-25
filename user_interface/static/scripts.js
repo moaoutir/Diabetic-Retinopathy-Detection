@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function sendDataToServer(image){
         console.log('Sending data to server:');
-        var url = "http://127.0.0.1:8000/poly";
+        var url = "http://127.0.0.1:8000/classify_image";
         $.ajax({
             url: url,
             type: 'POST',
